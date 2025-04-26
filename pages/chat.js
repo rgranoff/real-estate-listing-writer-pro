@@ -48,7 +48,7 @@ export default function Chat() {
           marginBottom: '2rem',
           color: 'white'
         }}>
-          Real Estate Listing Writer
+          Listing Writer Pro
         </h1>
         
         <div style={{
