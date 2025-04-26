@@ -35,31 +35,33 @@ export default function Chat() {
 
   return (
     <div style={{
-      backgroundColor: '#1a1f2d',
+      backgroundColor: 'white',
       minHeight: '100vh',
-      color: 'white',
+      color: 'black',
       fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif'
     }}>
       <div className="container mx-auto max-w-4xl p-4">
         <h1 style={{
-          fontSize: '2.5rem',
-          fontWeight: '600',
+          fontSize: '3rem',
+          fontWeight: '400',
           textAlign: 'center',
           marginBottom: '2rem',
-          color: 'white'
+          color: 'black',
+          letterSpacing: '2px'
         }}>
-          Listing Writer Pro
+          LISTING WRITER PRO
         </h1>
         
         <div style={{
-          backgroundColor: '#232838',
+          backgroundColor: 'white',
           padding: '1.5rem',
           borderRadius: '8px',
           minHeight: '400px',
           maxHeight: '600px',
           overflowY: 'auto',
           marginBottom: '1.5rem',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+          border: '1px solid #e5e5e5',
+          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)'
         }}>
           {messages.map((msg, index) => (
             <div key={index} style={{
@@ -71,15 +73,15 @@ export default function Chat() {
                 padding: '0.75rem 1rem',
                 borderRadius: '8px',
                 maxWidth: '80%',
-                backgroundColor: msg.role === 'user' ? '#3B82F6' : '#374151',
-                color: 'white'
+                backgroundColor: msg.role === 'user' ? '#f0f0f0' : '#e5e5e5',
+                color: 'black'
               }}>
                 <p style={{ margin: 0 }}>{msg.content}</p>
               </div>
             </div>
           ))}
           {isLoading && (
-            <div style={{ textAlign: 'center', color: '#9CA3AF' }}>
+            <div style={{ textAlign: 'center', color: '#666' }}>
               Loading...
             </div>
           )}
@@ -97,10 +99,10 @@ export default function Chat() {
             style={{
               flex: 1,
               padding: '0.75rem',
-              borderRadius: '6px',
-              border: '1px solid #374151',
-              backgroundColor: '#232838',
-              color: 'white',
+              borderRadius: '4px',
+              border: '1px solid #ccc',
+              backgroundColor: 'white',
+              color: 'black',
               outline: 'none'
             }}
           />
@@ -109,16 +111,13 @@ export default function Chat() {
             disabled={isLoading}
             style={{
               padding: '0.75rem 1.5rem',
-              backgroundColor: '#3B82F6',
+              backgroundColor: '#666',
               color: 'white',
-              borderRadius: '6px',
+              borderRadius: '4px',
               border: 'none',
               cursor: 'pointer',
               fontWeight: '500',
-              transition: 'background-color 0.2s',
-              ':hover': {
-                backgroundColor: '#2563EB'
-              }
+              transition: 'background-color 0.2s'
             }}
           >
             Send
