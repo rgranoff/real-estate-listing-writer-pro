@@ -32,17 +32,20 @@ export default function Chat() {
 
   return (
     <div style={{
+      margin: 0,
+      padding: 0,
       backgroundColor: '#1e1e1e',
       color: '#fff',
       fontFamily: 'sans-serif',
       minHeight: '100vh',
-      padding: '40px 20px'
+      width: '100vw',
     }}>
       <h1 style={{
         textAlign: 'center',
         fontSize: '2.5rem',
         fontWeight: '700',
-        marginBottom: '30px'
+        marginBottom: '30px',
+        paddingTop: '40px'
       }}>
         LISTING WRITER PRO
       </h1>
@@ -54,8 +57,11 @@ export default function Chat() {
         minHeight: '300px',
         maxHeight: '400px',
         overflowY: 'auto',
-        marginBottom: '1.5rem',
-        border: '1px solid #333'
+        margin: '0 auto 1.5rem',
+        width: '90%',
+        maxWidth: '900px',
+        border: '1px solid #2c2c5a',
+        boxShadow: '0 0 0 1px #2c2c5a'
       }}>
         {messages.map((msg, index) => (
           <div key={index} style={{
@@ -79,7 +85,14 @@ export default function Chat() {
         )}
       </div>
 
-      <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '0.5rem' }}>
+      <form onSubmit={handleSubmit} style={{
+        display: 'flex',
+        gap: '0.5rem',
+        justifyContent: 'center',
+        width: '90%',
+        maxWidth: '900px',
+        margin: '0 auto 40px'
+      }}>
         <input
           type="text"
           value={input}
@@ -89,28 +102,4 @@ export default function Chat() {
             flex: 1,
             padding: '0.75rem',
             borderRadius: '4px',
-            border: '1px solid #444',
-            backgroundColor: '#2c2c2c',
-            color: '#fff'
-          }}
-        />
-        <button
-          type="submit"
-          disabled={isLoading}
-          style={{
-            padding: '0.75rem 1.5rem',
-            backgroundColor: '#2c2c5a',
-            color: '#fff',
-            borderRadius: '4px',
-            border: 'none',
-            fontWeight: '600',
-            boxShadow: '0 0 6px rgba(44, 44, 90, 0.4)',
-            cursor: 'pointer'
-          }}
-        >
-          Send
-        </button>
-      </form>
-    </div>
-  );
-}
+            border: '
