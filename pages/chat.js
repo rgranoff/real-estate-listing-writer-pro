@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ChatPage() {
   const [input, setInput] = useState('');
@@ -47,20 +47,22 @@ export default function ChatPage() {
     setInput(text);
   };
 
+  // Remove default browser margin
+  useEffect(() => {
+    document.body.style.margin = '0';
+  }, []);
+
   return (
     <div
       style={{
-        margin: 0,
-        padding: 0,
         backgroundColor: '#000',
         color: '#fff',
         minHeight: '100vh',
         fontFamily:
           '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, sans-serif',
-        boxSizing: 'border-box',
       }}
     >
-      <div style={{ textAlign: 'center', padding: '40px 20px' }}>
+      <div style={{ padding: '40px 20px', textAlign: 'center' }}>
         <h1 style={{ fontSize: '2.4rem', fontWeight: 'bold' }}>LISTING WRITER PRO</h1>
         <p style={{ fontSize: '1rem', color: '#aaa', marginBottom: '30px' }}>
           By Robert Granoff
@@ -131,7 +133,7 @@ export default function ChatPage() {
                   display: 'inline-block',
                   padding: '12px 16px',
                   borderRadius: '8px',
-                  backgroundColor: msg.role === 'user' ? '#444' : '#444',
+                  backgroundColor: '#444',
                   color: '#fff',
                 }}
               >
