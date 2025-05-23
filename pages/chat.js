@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function ChatPage() {
   const [input, setInput] = useState('');
@@ -43,7 +43,8 @@ export default function ChatPage() {
       color: '#fff',
       fontFamily: 'sans-serif',
       minHeight: '100vh',
-      padding: '40px 20px'
+      padding: '40px 20px',
+      margin: 0,
     }}>
       <h1 style={{
         textAlign: 'center',
@@ -102,7 +103,6 @@ export default function ChatPage() {
         backgroundColor: '#1e1e1e',
         padding: '1.5rem',
         borderRadius: '8px',
-        border: '1px solid #2c56e2',
         marginBottom: '20px',
         maxHeight: '400px',
         overflowY: 'auto'
@@ -115,7 +115,6 @@ export default function ChatPage() {
               color: '#fff',
               padding: '10px 14px',
               borderRadius: '8px',
-              border: '1px solid #2c56e2',
               maxWidth: '80%'
             }}>
               {msg.content}
@@ -137,7 +136,7 @@ export default function ChatPage() {
             borderRadius: '6px',
             backgroundColor: '#1e1e1e',
             color: '#fff',
-            border: '1px solid #2c56e2',
+            border: 'none',
             outline: 'none'
           }}
         />
