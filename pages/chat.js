@@ -11,6 +11,11 @@ export default function ChatPage() {
   ]);
   const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(() => {
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!input.trim()) return;
@@ -36,21 +41,34 @@ export default function ChatPage() {
     }
   };
 
+  const handlePromptClick = async (text) => {
+    const userMessage = { role: 'user', content: text };
+    setMessages((prev) => [...prev, userMessage]);
+    setInput('');
+    setIsLoading(true);
+
+    try {
+      const res = await fetch('/api/hello', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text }),
+      });
+      const data = await res.json();
+      const assistantMessage = { role: 'assistant', content: data.message };
+      setMessages((prev) => [...prev, assistantMessage]);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const prompts = [
     'How to Use This Service',
     'What kind of properties can you write for?',
     'Ask me about my listing',
     'Why should I be compliant?',
   ];
-
-  const handlePromptClick = (text) => {
-    setInput(text);
-  };
-
-  // Remove default browser margin
-  useEffect(() => {
-    document.body.style.margin = '0';
-  }, []);
 
   return (
     <div
