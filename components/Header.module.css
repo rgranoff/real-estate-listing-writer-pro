@@ -1,42 +1,32 @@
 .header {
-  background-color: #fff;
-  border-bottom: 1px solid #e5e5e5;
-  padding: 20px 40px;
-  font-family: 'Poppins', sans-serif;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.container {
-  max-width: 1800px;
-  margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
+  padding: 24px 60px;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-.logoLink {
-  display: block;
+.logo {
+  height: 52px;
 }
 
 .nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 30px;
+  gap: 28px;
+  flex-wrap: nowrap;
 }
 
-.navLink {
-  color: #000;
+.nav a {
   text-decoration: none;
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  transition: opacity 0.2s ease;
+  color: #000;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  transition: color 0.3s;
 }
 
-.navLink:hover {
-  opacity: 0.7;
+.nav a:hover {
+  text-decoration: underline;
+  color: #333;
 }
