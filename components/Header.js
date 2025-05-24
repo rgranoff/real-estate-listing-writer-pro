@@ -1,6 +1,5 @@
 import styles from './Header.module.css';
 import Image from 'next/image';
-import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Header() {
@@ -8,28 +7,33 @@ export default function Header() {
     <>
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
           rel="stylesheet"
         />
       </Head>
 
       <header className={styles.header}>
-        <div className={styles.logoContainer}>
-          <Link href="/">
-            <Image src="/logo.png" alt="Real Estate Marketing Pro" width={180} height={60} />
-          </Link>
-        </div>
+        <a href="https://www.realestatemarketing.pro/" className={styles.logoLink}>
+          <Image
+            src="/logo.png"
+            alt="Real Estate Marketing Pro"
+            width={270}
+            height={80}
+            className={styles.logo}
+            priority
+          />
+        </a>
         <nav className={styles.nav}>
-          <Link href="/" className={styles.link}>HOME</Link>
-          <Link href="/about" className={styles.link}>ABOUT</Link>
-          <Link href="/services" className={styles.link}>SERVICES</Link>
-          <Link href="/pricing" className={styles.link}>PRICING</Link>
-          <Link href="/marketing-kit" className={styles.link}>MARKETING KIT</Link>
-          <Link href="/chat" className={styles.link}>AI LISTING WRITER PRO</Link>
-          <Link href="/client-portal" className={styles.link}>CLIENT PORTAL</Link>
-          <Link href="/testimonials" className={styles.link}>TESTIMONIALS</Link>
-          <Link href="/terms" className={styles.link}>TERMS</Link>
-          <Link href="/contact" className={styles.link}>CONTACT</Link>
+          <a href="https://www.realestatemarketing.pro/">HOME</a>
+          <a href="https://www.realestatemarketing.pro/about">ABOUT</a>
+          <a href="https://www.realestatemarketing.pro/services">SERVICES</a>
+          <a href="https://www.realestatemarketing.pro/pricing">PRICING</a>
+          <a href="https://www.realestatemarketing.pro/marketing-kit">MARKETING KIT</a>
+          <a href="/chat">AI LISTING WRITER PRO</a>
+          <a href="https://www.realestatemarketing.pro/client-portal">CLIENT PORTAL</a>
+          <a href="https://www.realestatemarketing.pro/testimonials">TESTIMONIALS</a>
+          <a href="https://www.realestatemarketing.pro/terms">TERMS</a>
+          <a href="https://www.realestatemarketing.pro/contact">CONTACT</a>
         </nav>
       </header>
     </>
