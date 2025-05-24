@@ -1,24 +1,25 @@
-:global(body) {
-  font-family: 'Poppins', sans-serif;
-}
-
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  height: 120px; /* Adjusted to match Squarespace header */
+  padding: 0 60px;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
 }
 
-.logo {
-  height: 55px;
+.logo img {
+  height: 72px; /* Make logo match the visual height from Squarespace */
+  width: auto;
 }
 
 .nav {
   display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
+  gap: 36px;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .link {
@@ -26,10 +27,10 @@
   color: #000;
   font-size: 16px;
   font-weight: 300;
-  transition: color 0.3s ease;
+  line-height: 1;
+  transition: opacity 0.3s ease;
 }
 
 .link:hover {
-  color: #1a1a1a;
-  text-decoration: underline;
+  opacity: 0.7;
 }
