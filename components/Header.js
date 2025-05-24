@@ -1,14 +1,14 @@
 const Header = () => (
   <iframe
-    src="https://www.realestatemarketing.pro/ai-header-strip"
+    src="https://www.realestatemarketing.pro/ai-header-footer-strip"
     style={{
       border: "none",
       width: "100%",
-      height: "120px", // adjust if needed
+      height: "160px", // Adjust if needed
       display: "block",
     }}
     scrolling="no"
-    title="Shared Site Header"
+    title="Shared Site Header and Footer"
   />
 );
 
