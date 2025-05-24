@@ -6,15 +6,17 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href="https://www.realestatemarketing.pro/">
-          <Image
-            src="/logo.png"
-            alt="Real Estate Marketing Pro"
-            width={180}
-            height={60}
-            className={styles.logo}
-          />
-        </Link>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Link href="https://www.realestatemarketing.pro/">
+            <Image
+              src="/logo.png"
+              alt="Real Estate Marketing Pro"
+              width={280}
+              height={80}
+              priority
+            />
+          </Link>
+        </div>
         <nav className={styles.nav}>
           {[
             ["HOME", "/"],
@@ -26,7 +28,7 @@ const Header = () => {
             ["CLIENT PORTAL", "/client-portal"],
             ["TESTIMONIALS", "/testimonials"],
             ["TERMS", "/terms"],
-            ["CONTACT", "/contact"]
+            ["CONTACT", "/contact"],
           ].map(([label, href]) => (
             <Link key={label} href={`https://www.realestatemarketing.pro${href}`}>
               {label}
