@@ -1,36 +1,42 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 120px; /* Adjusted to match Squarespace header */
-  padding: 0 60px;
-  background-color: white;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px 40px;
   font-family: 'Poppins', sans-serif;
-  border-bottom: 1px solid #eee;
-  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo img {
-  height: 72px; /* Make logo match the visual height from Squarespace */
-  width: auto;
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logoLink {
+  display: block;
 }
 
 .nav {
   display: flex;
-  gap: 36px;
-  flex-wrap: nowrap;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 30px;
 }
 
-.link {
-  text-decoration: none;
+.navLink {
   color: #000;
+  text-decoration: none;
+  font-weight: 400;
   font-size: 16px;
-  font-weight: 300;
-  line-height: 1;
-  transition: opacity 0.3s ease;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s ease;
 }
 
-.link:hover {
+.navLink:hover {
   opacity: 0.7;
 }
