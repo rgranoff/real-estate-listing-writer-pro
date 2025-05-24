@@ -1,40 +1,53 @@
-/* components/Header.module.css */
-
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 16px 32px;
-  background-color: #fff;
-  border-bottom: 1px solid #eaeaea;
-  font-family: 'Poppins', sans-serif;
-  height: 110px;
+  align-items: center;
+  padding: 0 48px;
+  background-color: white;
+  height: 120px;
+  border-bottom: 1px solid #eee;
 }
 
 .logo {
-  height: auto;
+  height: 60px;
   width: auto;
-  max-height: 64px;
+  display: flex;
+  align-items: center;
 }
 
 .nav {
   display: flex;
-  flex-wrap: nowrap;
   gap: 32px;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 1;
-  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: #000;
 }
 
 .nav a {
   text-decoration: none;
-  color: black;
-  transition: opacity 0.2s ease-in-out;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+  white-space: nowrap;
 }
 
 .nav a:hover {
-  opacity: 0.6;
+  color: #555;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 24px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+  }
 }
