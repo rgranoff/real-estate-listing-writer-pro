@@ -1,40 +1,35 @@
-/* components/Header.module.css */
-
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 16px 32px;
-  background-color: #fff;
-  border-bottom: 1px solid #eaeaea;
-  font-family: 'Poppins', sans-serif;
+  align-items: center;
   height: 110px;
+  padding: 0 40px;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: auto;
+.logo img {
+  height: 55px;
   width: auto;
-  max-height: 64px;
+  object-fit: contain;
 }
 
 .nav {
   display: flex;
-  flex-wrap: nowrap;
   gap: 32px;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 1;
-  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
 }
 
 .nav a {
   text-decoration: none;
-  color: black;
-  transition: opacity 0.2s ease-in-out;
+  color: #000;
+  transition: color 0.2s ease;
 }
 
 .nav a:hover {
-  opacity: 0.6;
+  text-decoration: underline;
+  color: #000;
 }
