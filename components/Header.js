@@ -1,39 +1,35 @@
-import Link from 'next/link';
-import Image from 'next/image';
+// components/Header.js
+import React from 'react';
 import styles from './Header.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export default function Header() {
+const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.container}>
-        <Link href="/" className={styles.logoLink}>
-          <Image
-            src="/logo.png"
-            alt="REAL ESTATE MARKETING .PRO"
-            width={400}
-            height={80}
-            priority
-          />
-        </Link>
-        <nav className={styles.nav}>
-          {[
-            ['HOME', '/'],
-            ['ABOUT', '/about'],
-            ['SERVICES', '/services'],
-            ['PRICING', '/pricing'],
-            ['MARKETING KIT', '/marketing-kit'],
-            ['AI LISTING WRITER PRO', '/ai-listing-writer-pro'],
-            ['CLIENT PORTAL', '/client-portal'],
-            ['TESTIMONIALS', '/testimonials'],
-            ['TERMS', '/terms'],
-            ['CONTACT', '/contact'],
-          ].map(([label, href]) => (
-            <Link key={label} href={href} className={styles.navLink}>
-              {label}
-            </Link>
-          ))}
-        </nav>
-      </div>
+      <a href="https://www.realestatemarketing.pro/">
+        <Image
+          src="/logo.png"
+          alt="Real Estate Marketing Pro"
+          width={250}
+          height={60}
+          className={styles.logo}
+        />
+      </a>
+      <nav className={styles.nav}>
+        <a href="https://www.realestatemarketing.pro/">HOME</a>
+        <a href="https://www.realestatemarketing.pro/about">ABOUT</a>
+        <a href="https://www.realestatemarketing.pro/services">SERVICES</a>
+        <a href="https://www.realestatemarketing.pro/pricing">PRICING</a>
+        <a href="https://www.realestatemarketing.pro/marketing-kit">MARKETING KIT</a>
+        <a href="https://www.realestatemarketing.pro/ai-listing-writer-pro">AI LISTING WRITER PRO</a>
+        <a href="https://www.realestatemarketing.pro/client-portal">CLIENT PORTAL</a>
+        <a href="https://www.realestatemarketing.pro/testimonials">TESTIMONIALS</a>
+        <a href="https://www.realestatemarketing.pro/terms">TERMS</a>
+        <a href="https://www.realestatemarketing.pro/contact">CONTACT</a>
+      </nav>
     </header>
   );
-}
+};
+
+export default Header;
